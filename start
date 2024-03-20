@@ -4,3 +4,5 @@ wget https://www.shrec.net/SHREC-2024-hand-motion/Data/Data%20Split.rar
 unrar x Data\ Split.rar
 rm Data\ Split.rar
 mv Data\ Split data
+
+exec "$@"
