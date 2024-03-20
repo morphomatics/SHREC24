@@ -35,15 +35,15 @@ def predict(trjs: Sequence[Motion], model_pkl: str):
         # fuse
         mu = Mean.compute(Sphere((6,)), jnp.sqrt(jnp.asarray(p)))
         c = jnp.argmax(mu)
-        print(i, class_idx_to_str(c), int(trj.globals[0]), c)
+        print(i, class_idx_to_str(c))
     
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Predict hand motion.')
     
-    parser.add_argument('model', type=str, nargs='?', default='model.pkl',
+    parser.add_argument('--model', type=str, nargs='?', default='model.pkl',
                     help='path to trained model(s)')
-    parser.add_argument('path', type=str, nargs='?', default='./data/Test-set/**/*.txt',
+    parser.add_argument('--path', type=str, nargs='?', default='./data/Test-set/**/*.txt',
                     help='path to motion file (may be glob pattern)')
 
     args = parser.parse_args()

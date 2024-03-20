@@ -13,3 +13,12 @@ The sequences are of variable length and comprise 3D coordinate data of landmark
 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morphomatics/SHREC24/HEAD) for a live demo.
+
+## Running the code
+
+To run the test script on all test sequences execute the following
+```bash
+python test.py --path='./data/Test-set/**/*.txt'
+```
+
+The training code can be found in `train.py`.
