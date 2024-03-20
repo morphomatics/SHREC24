@@ -5,4 +5,4 @@ dependencies:
   - python=3.11
   - pip
   - pip:
-    - git+https://github.com/morphomatics/morphomatics.git#egg=morphomatics
+    - git+https://github.com/morphomatics/morphomatics.git@cad8f28c708a5165355fdc93830ac7a328de41a9#egg=morphomatics
