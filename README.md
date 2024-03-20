@@ -3,7 +3,7 @@
 ## Description
 
 This repository contains the submission, i.e. the code and models, by
-* Marin Hanik,
+* Martin Hanik,
 * Esfandiar Navayazdani, and
 * Christoph von Tycowicz
 
