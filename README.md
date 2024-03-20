@@ -12,4 +12,4 @@ The task is to classify highly similar hand motion sequences from a professional
 The sequences are of variable length and comprise 3D coordinate data of landmarks on both potters hands.
 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morphomatics/shrec24/HEAD) for a live demo.
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/morphomatics/SHREC24/HEAD) for a live demo.
