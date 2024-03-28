@@ -9,7 +9,7 @@ import jax.numpy as jnp
 import haiku as hk
 
 from morphomatics.manifold import Sphere
-from morphomatics.stats import ExponentialBarycenter as Mean
+from morphomatics.stats import GeometricMedian as Median
 
 from model import net_fn
 from helpers import Motion, classes, read, iterate
@@ -32,8 +32,9 @@ def predict(trjs: Sequence[Motion], model_pkl: str):
     for i, trj in enumerate(iterate(trjs)):
         # predict
         p = [jax.nn.softmax(net.apply(p, trj)) for p in params]
+        p = jnp.asarray(p).squeeze()
         # fuse
-        mu = Mean.compute(Sphere((6,)), jnp.sqrt(jnp.asarray(p)))
+        mu = Median.compute(Sphere((7,)), jnp.sqrt(p))**2
         c = jnp.argmax(mu)
         print(i, class_idx_to_str(c))
     
